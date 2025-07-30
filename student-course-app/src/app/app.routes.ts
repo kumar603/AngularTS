@@ -4,9 +4,10 @@ import { DirectivesComponent } from './components/directives/directives.componen
 import { StudentListComponent } from './components/student-list/student-list.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+ 
+import { StudentFormComponent } from './components/student-form/student-form.component';
 
  
-
 
 export const appRoutes: Routes = [
   { path: '', redirectTo: 'databinding', pathMatch: 'full' },
@@ -17,4 +18,6 @@ export const appRoutes: Routes = [
   { path: 'students', component: StudentListComponent },
    { path: 'home', component: HomeComponent },
    { path: '', component: HomeComponent },
+  { path: 'student-form', component: StudentFormComponent },
+
 ];

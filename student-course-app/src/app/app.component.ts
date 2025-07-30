@@ -20,7 +20,11 @@ import { RouterModule } from '@angular/router';
       <a routerLink="/">Home</a> |
       <a routerLink="/about">About</a> |
       <a routerLink="/students">Students</a>
+  <a routerLink="/student-form">Student Form</a>
+      <a routerLink="/databinding">Data Binding</a> |
+      <a routerLink="/directives">Directives</a>
     </nav>
+
     <hr />
     <router-outlet></router-outlet>`
 })
