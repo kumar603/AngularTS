@@ -1,15 +1,7 @@
 import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { bootstrapApplication } from '@angular/platform-browser';
-import { AppComponent } from './app.component';
-import { StudentComponent } from './student/student.component';
+import { appRoutes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
-  providers: [
-    provideRouter([]) // no routing yet
-  ]
+  providers: [provideRouter(appRoutes)]
 };
-
-bootstrapApplication(AppComponent, {
-  providers: appConfig.providers,
-}).catch(err => console.error(err));

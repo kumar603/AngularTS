@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
-import { StudentComponent } from "./student/student.component";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
+  imports: [RouterOutlet],
   template: `
-    <h1>Welcome to Angular 18</h1>
-    <app-student></app-student> <!-- using student component -->
-  `,
-  imports: [StudentComponent],
+    <h1>My Angular App</h1>
+    <nav>
+      <a routerLink="/databinding">Data Binding</a> |
+      <a routerLink="/directives">Directives</a>
+    </nav>
+    <router-outlet></router-outlet> <!-- This is where your routed component will show -->
+  `
 })
 export class AppComponent {}

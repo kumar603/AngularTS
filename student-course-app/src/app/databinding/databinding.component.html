@@ -1,0 +1,14 @@
+<h2>{{ title }}</h2>
+
+<!-- Two-Way Binding -->
+<label>Enter your name:</label>
+<input type="text" [(ngModel)]="username" />
+
+<!-- Event Binding -->
+<button (click)="showMessage()">Submits</button>
+
+<!-- One-Way Binding -->
+<p *ngIf="message">{{ message }}</p>
+
+<!-- Two-Way Binding -->
+<p >{{ username }}</p>
