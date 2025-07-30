@@ -1,9 +1,15 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
-
-import { routes } from './app.routes';
-import { provideClientHydration } from '@angular/platform-browser';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+import { StudentComponent } from './student/student.component';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration()]
+  providers: [
+    provideRouter([]) // no routing yet
+  ]
 };
+
+bootstrapApplication(AppComponent, {
+  providers: appConfig.providers,
+}).catch(err => console.error(err));
