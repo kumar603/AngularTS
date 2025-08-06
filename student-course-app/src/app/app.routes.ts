@@ -61,10 +61,10 @@ import { StudentFormComponent } from './components/student-form/student-form.com
 
 import { StudentApiComponent } from './components/student-api/student-api.component';
 
-
+import { LoginComponent } from './components/login/login.component';
 
 export const appRoutes: Routes = [
-  { path: '', redirectTo: 'databinding', pathMatch: 'full' },
+  // { path: '', redirectTo: 'databinding', pathMatch: 'full' },
   { path: 'databinding', component: DataBindingComponent },
     { path: 'directives', component: DirectivesComponent },
     { path: 'student-list', component: StudentListComponent },
@@ -74,5 +74,6 @@ export const appRoutes: Routes = [
    { path: '', component: HomeComponent },
   { path: 'student-form', component: StudentFormComponent },
   { path: 'student-api', component: StudentApiComponent },
+   { path: '', component: LoginComponent },
 
 ];
